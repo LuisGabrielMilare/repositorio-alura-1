@@ -3,52 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Blog de Tecnologia</title>
+    <title>Blog Responsivo com Flexbox</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="blog-header">
-        <h1>Tech & Educação Blog</h1>
-        <p>Compartilhando conhecimento linha a linha</p>
+        <h1>Tech & Educação Coletivo</h1>
+        <p>Painel de Postagens Colaborativas</p>
     </header>
 
-    <main class="feed-principal">
+    <main class="feed-container">
         
-        <article class="post-artigo">
-            <img class="post-imagem" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&q=80"
-                alt="Logotipo conceitual de tecnologia e educacao: um livro aberto de onde emerge um cérebro digital brilhante.">
-
-            <div class="post-conteudo">
-                <h2>Meu primeiro post</h2>
-                <p class="artigo-autor">Por: <strong>Marcelo Paludetto</strong></p>
-                <p class="artigo-texto">Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
-                
-                <div class="post-acoes">
-                    <button class="btn-reacao btn-like">👍 <span>0</span></button>
-                    <button class="btn-reacao btn-love">❤️ <span>0</span></button>
-                </div>
+        <article class="post-card">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&q=80" alt="Computador com código">
+            <h2>Primeiro Post</h2>
+            <p class="artigo-autor">Por: Marcelo Paludetto</p>
+            <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área.</p>
+            <div class="botoes-reacao">
+                <button class="btn-interagir">👍 <span>0</span></button>
+                <button class="btn-interagir">❤️ <span>0</span></button>
             </div>
         </article>
 
-        <article class="post-artigo">
-            <img class="post-imagem" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&q=80"
-                alt="Logotipo conceitual de tecnologia e educacao: um livro aberto de onde emerge um cérebro digital brilhante.">
+        <article class="post-card">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80" alt="Circuitos eletrônicos cibersegurança">
+            <h2>Segundo Post</h2>
+            <p class="artigo-autor">Por: Marcelo Paludetto</p>
+            <p>Criar componentes reutilizáveis e entender a semântica do HTML nos ajuda a construir aplicações organizadas.</p>
+            <div class="botoes-reacao">
+                <button class="btn-interagir">👍 <span>0</span></button>
+                <button class="btn-interagir">❤️ <span>0</span></button>
+            </div>
+        </article>
 
-            <div class="post-conteudo">
-                <h2>Meu segundo post</h2>
-                <p class="artigo-autor">Por: <strong>Marcelo Paludetto</strong></p>
-                <p class="artigo-texto">Criar componentes reutilizáveis e entender a semântica do HTML nos ajuda a construir aplicações muito mais organizadas e fáceis de dar manutenção.</p>
-                
-                <div class="post-acoes">
-                    <button class="btn-reacao btn-like">👍 <span>0</span></button>
-                    <button class="btn-reacao btn-love">❤️ <span>0</span></button>
-                </div>
+        <article class="post-card">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&q=80" alt="Conexões globais digitais">
+            <h2>Terceiro Post</h2>
+            <p class="artigo-autor">Por: Colega Dev</p>
+            <p>O Flexbox revolucionou a forma como alinhamos elementos no CSS. Adeus tabelas e floats complexos!</p>
+            <div class="botoes-reacao">
+                <button class="btn-interagir">👍 <span>0</span></button>
+                <button class="btn-interagir">❤️ <span>0</span></button>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&q=80" alt="Dispositivos modernos">
+            <h2>Quarto Post</h2>
+            <p class="artigo-autor">Por: Ana</p>
+            <p>Você sabia? O primeiro mouse de computador foi inventado por Douglas Engelbart e era feito de madeira!</p>
+            <div class="botoes-reacao">
+                <button class="btn-interagir">👍 <span>0</span></button>
+                <button class="btn-interagir">❤️ <span>0</span></button>
             </div>
         </article>
 
     </main>
 
-    <script src="app.js"></script>
 </body>
 </html>

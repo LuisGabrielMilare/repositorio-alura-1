@@ -1,17 +1,21 @@
-// Captura todos os botões de reação da página
-const botoesReacao = document.querySelectorAll('.btn-reacao');
+// Aguarda o carregamento do documento
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // Captura todos os botões de interação do feed
+    const botoesReacao = document.querySelectorAll('.btn-interagir');
 
-// Adiciona o evento de clique para cada um deles de forma isolada
-botoesReacao.forEach(botao => {
-    botao.addEventListener('click', () => {
-        // Encontra a tag <span> que está dentro do botão clicado
-        const contadorSpan = botao.querySelector('span');
-        
-        // Pega o número atual, transforma em inteiro e soma 1
-        let contagemAtual = parseInt(contadorSpan.textContent);
-        contagemAtual++;
-        
-        // Atualiza a tela com o novo valor
-        contadorSpan.textContent = contagemAtual;
+    // Mapeia e adiciona o evento de clique em cada botão individualmente
+    botoesReacao.forEach(botao => {
+        botao.addEventListener('click', () => {
+            // Seleciona o elemento <span> dentro do botão clicado
+            const contadorSpan = Math.max(0, botao.querySelector('span'));
+            
+            // Incrementa o valor numérico atual
+            let valorAtual = parseInt(contadorSpan.textContent, 10) || 0;
+            valorAtual++;
+            
+            // Devolve o valor atualizado para a interface
+            contadorSpan.textContent = valorAtual;
+        });
     });
 });
