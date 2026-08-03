@@ -3,22 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entendendo Espaçamentos CSS</title>
+    <title>Mastering the Box Model - Interactive Lab</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header id="meu-header">
-        <h1>Meu Cabeçalho Estilizado</h1>
-        <p>Praticando max-width, margin e padding.</p>
-    </header>
+    <div class="container-principal">
+        <aside class="painel-controle">
+            <h2>Configurações</h2>
+            <p class="subtitulo">Ajuste os valores para inspecionar o Box Model</p>
+            
+            <div class="grupo-controle">
+                <label for="slider-max-width">Largura Máxima (max-width): <span id="val-max-width">800px</span></label>
+                <input type="range" id="slider-max-width" min="300" max="1000" value="800">
+            </div>
 
-    <main id="meu-main">
-        <h2>Conteúdo Principal</h2>
-        <p>Como diz o texto, o preenchimento funciona igual à margem que deixamos ao escrever em uma folha de papel para o texto não ficar colado nas bordas, facilitando a leitura.</p>
-        
-        <button id="btn-borda">Alternar Borda de Visualização</button>
-    </main>
+            <div class="grupo-controle">
+                <label for="slider-padding">Espaçamento Interno (padding): <span id="val-padding">16px</span></label>
+                <input type="range" id="slider-padding" min="0" max="60" value="16">
+            </div>
+
+            <div class="grupo-controle">
+                <label for="slider-margin">Margem Lateral (margin: 0 auto): <span id="val-margin">Auto</span></label>
+                <p class="info-ajuste">A margem auto centraliza o elemento horizontalmente.</p>
+            </div>
+
+            <button id="btn-borda-inspecao" class="btn-primario">Ativar Borda de Inspeção (5px)</button>
+        </aside>
+
+        <main class="area-visualizacao">
+            <header id="preview-header">
+                <h1>Visualizador de Layout</h1>
+                <p>Altere os sliders ao lado para ver o comportamento deste bloco.</p>
+            </header>
+
+            <article id="preview-card" class="card-conteudo">
+                <h3>O Efeito do Espaçamento</h3>
+                <p>Quando adicionamos <strong>padding</strong>, criamos um respiro interno para o texto. A <strong>margin: auto</strong> calcula o espaço restante na tela e divide igualmente nas laterais, mantendo este card perfeitamente centralizado.</p>
+                <div class="badge-status">Modo Dinâmico Ativo</div>
+            </article>
+        </main>
+    </div>
 
     <script src="app.js"></script>
 </body>
