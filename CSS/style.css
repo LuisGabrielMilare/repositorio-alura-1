@@ -1,115 +1,117 @@
-/* Configurações Gerais da Página */
+/* Paleta de Cores e Variáveis (Modo Claro Padrão) */
+:root {
+    --cor-primaria: #f0f4f8;
+    --cor-secundaria: #183C63;
+    --cor-texto: #333333;
+    --cor-card-bg: #ffffff;
+    --cor-sombra: rgba(0, 0, 0, 0.15);
+    --cor-btn-bg: #e2e8f0;
+    --cor-btn-texto: #183C63;
+}
+
+/* Modificadores para o Modo Escuro */
+.tema-escuro {
+    --cor-primaria: #0f172a;      /* Fundo da tela escuro */
+    --cor-secundaria: #1e293b;    /* Fundo do header escuro */
+    --cor-texto: #f8fafc;         /* Texto claro */
+    --cor-card-bg: #1e293b;       /* Card escuro */
+    --cor-sombra: rgba(0, 0, 0, 0.5);
+    --cor-btn-bg: #334155;        /* Botão escuro padrão */
+    --cor-btn-texto: #ffffff;
+}
+
+/* 1. SELETOR UNIVERSAL: Transição suave de 0.8s para todas as mudanças de cor */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.8s ease, color 0.8s ease, box-shadow 0.8s ease, border-color 0.8s ease;
 }
 
 body {
     font-family: 'Segoe UI', system-ui, sans-serif;
-    background-color: #f0f4f8;
-    color: #333333;
-    /* Ajustado para ocupar toda a largura da janela de forma responsiva */
-    max-width: 100vw; 
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+    max-width: 100vw;
     overflow-x: hidden;
 }
 
-/* Cabeçalho do Blog */
+/* Cabeçalho */
 .blog-header {
-    text-align: center;
-    padding: 30px 20px;
-    background-color: #183C63;
+    background-color: var(--cor-secundaria);
     color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 10px var(--cor-sombra);
 }
 
-.blog-header h1 {
-    font-size: 2rem;
-    margin-bottom: 5px;
+.header-conteudo {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* O Menu/Container de Conteúdo Flexível */
+/* O Botão de Alternar Tema (Estilo Base) */
+.btn-tema-escuro {
+    background-color: var(--cor-btn-bg);
+    color: var(--cor-btn-texto);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 2. AJUSTE DO BOTÃO NO MODO ESCURO (Evita que ele suma no fundo) */
+.tema-escuro .btn-tema-escuro {
+    background-color: #3b82f6; /* Destaque azul vibrante no modo escuro */
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+}
+
+/* Feed Container */
 .feed-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que os posts excedentes quebrem para a próxima linha */
-    padding: 16px;
-    justify-content: center; /* Centraliza a linha inteira na tela */
+    flex-wrap: wrap;
+    max-width: 1050px;
+    margin: 40px auto;
+    padding: 0 16px;
+    justify-content: center;
 }
 
-/* Estilização Completa e Alinhamento do Post (Conforme a Transcrição) */
+/* 3. ARTIGOS: Remoção de bordas e aplicação do BOX-SHADOW */
 .post-card {
     display: flex;
-    border: 1px solid #183C63; /* Borda azul de 1px solicitada para delimitação */
+    flex-direction: column;
+    gap: 12px;
     margin: 16px;
-    gap: 16px;
-    padding: 16px;
-    background-color: #ffffff;
+    padding: 24px;
+    background-color: var(--cor-card-bg);
     border-radius: 8px;
+    flex: 1 1 30%;
+    min-width: 280px;
     
-    /* Regra de Ouro da Aula: Crescimento, Encolhimento e Base Baseada em 25% */
-    flex: 1 1 25%; 
-    min-width: 280px; /* Impede que o card fique esmagado em telas muito pequenas */
-    
-    /* Alinhamento Interno em eixos verticais e horizontais */
-    flex-direction: column;  /* Tudo fica um abaixo do outro */
-    align-items: center;     /* Alinha o conteúdo ao centro (horizontal) */
-    text-align: center;      /* Alinha o texto ao centro */
-    justify-content: center; /* Justifica o conteúdo ao centro no eixo vertical */
-    
-    box-shadow: 0 4px 6px rgba(24, 60, 99, 0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.post-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 15px rgba(24, 60, 99, 0.15);
-}
-
-/* Imagens Internas dos Cards */
-.post-card img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 4px;
+    /* Configuração da sombra para dar profundidade */
+    box-shadow: 0 4px 12px var(--cor-sombra); 
 }
 
 .post-card h2 {
-    color: #183C63;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    font-weight: 700;
 }
 
 .artigo-autor {
     font-size: 0.85rem;
-    color: #666666;
+    opacity: 0.7;
     font-style: italic;
-    margin-top: -8px;
 }
 
 .post-card p {
+    line-height: 1.6;
     font-size: 0.95rem;
-    line-height: 1.5;
-    color: #4a5568;
-}
-
-/* Área dos Botões de Ação */
-.botoes-reacao {
-    display: flex;
-    gap: 10px;
-    margin-top: auto; /* Empurra os botões sempre para o final do card */
-    padding-top: 10px;
-}
-
-.btn-interagir {
-    background-color: #f0f4f8;
-    border: 1px solid #cbd5e1;
-    padding: 6px 14px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.2s;
-}
-
-.btn-interagir:hover {
-    background-color: #183C63;
-    color: white;
-    border-color: #183C63;
 }

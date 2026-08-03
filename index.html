@@ -3,63 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Responsivo com Flexbox</title>
+    <title>Tech Blog - Edição Final</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="blog-header">
-        <h1>Tech & Educação Coletivo</h1>
-        <p>Painel de Postagens Colaborativas</p>
+        <div class="header-conteudo">
+            <h1>Tech & Educação Coletivo</h1>
+            <button id="toggle-tema" class="btn-tema-escuro" aria-label="Alternar tema">
+                🌙 <span class="txt-btn">Modo Escuro</span>
+            </button>
+        </div>
     </header>
 
     <main class="feed-container">
         
         <article class="post-card">
-            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&q=80" alt="Computador com código">
-            <h2>Primeiro Post</h2>
+            <h2>Melhorando a Legibilidade</h2>
             <p class="artigo-autor">Por: Marcelo Paludetto</p>
-            <p>Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área.</p>
-            <div class="botoes-reacao">
-                <button class="btn-interagir">👍 <span>0</span></button>
-                <button class="btn-interagir">❤️ <span>0</span></button>
-            </div>
+            <p>Nesta jornada, alteramos as fontes do projeto e adicionamos pesos diferentes para criar uma hierarquia visual excelente e destacar o que realmente importa.</p>
         </article>
 
         <article class="post-card">
-            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80" alt="Circuitos eletrônicos cibersegurança">
-            <h2>Segundo Post</h2>
-            <p class="artigo-autor">Por: Marcelo Paludetto</p>
-            <p>Criar componentes reutilizáveis e entender a semântica do HTML nos ajuda a construir aplicações organizadas.</p>
-            <div class="botoes-reacao">
-                <button class="btn-interagir">👍 <span>0</span></button>
-                <button class="btn-interagir">❤️ <span>0</span></button>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&q=80" alt="Conexões globais digitais">
-            <h2>Terceiro Post</h2>
-            <p class="artigo-autor">Por: Colega Dev</p>
-            <p>O Flexbox revolucionou a forma como alinhamos elementos no CSS. Adeus tabelas e floats complexos!</p>
-            <div class="botoes-reacao">
-                <button class="btn-interagir">👍 <span>0</span></button>
-                <button class="btn-interagir">❤️ <span>0</span></button>
-            </div>
-        </article>
-
-        <article class="post-card">
-            <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&q=80" alt="Dispositivos modernos">
-            <h2>Quarto Post</h2>
+            <h2>O Poder do Box-Shadow</h2>
             <p class="artigo-autor">Por: Ana</p>
-            <p>Você sabia? O primeiro mouse de computador foi inventado por Douglas Engelbart e era feito de madeira!</p>
-            <div class="botoes-reacao">
-                <button class="btn-interagir">👍 <span>0</span></button>
-                <button class="btn-interagir">❤️ <span>0</span></button>
-            </div>
+            <p>Substituir bordas sólidas por sombras com transparência (RGBA) dá um efeito de profundidade incrível, fazendo com que os cards pareçam flutuar na tela.</p>
+        </article>
+
+        <article class="post-card">
+            <h2>Transições Suaves no CSS</h2>
+            <p class="artigo-autor">Por: Colega Dev</p>
+            <p>Usar o seletor universal com a propriedade transition faz com que a troca de cores não seja abrupta, gerando uma experiência de usuário muito mais agradável.</p>
         </article>
 
     </main>
 
+    <script src="app.js"></script>
 </body>
 </html>

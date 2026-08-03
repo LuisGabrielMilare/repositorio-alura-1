@@ -1,21 +1,16 @@
-// Aguarda o carregamento do documento
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // Captura todos os botões de interação do feed
-    const botoesReacao = document.querySelectorAll('.btn-interagir');
+// Captura o botão de alternância de tema
+const btnTema = document.getElementById('toggle-tema');
+const txtBtn = btnTema.querySelector('.txt-btn');
 
-    // Mapeia e adiciona o evento de clique em cada botão individualmente
-    botoesReacao.forEach(botao => {
-        botao.addEventListener('click', () => {
-            // Seleciona o elemento <span> dentro do botão clicado
-            const contadorSpan = Math.max(0, botao.querySelector('span'));
-            
-            // Incrementa o valor numérico atual
-            let valorAtual = parseInt(contadorSpan.textContent, 10) || 0;
-            valorAtual++;
-            
-            // Devolve o valor atualizado para a interface
-            contadorSpan.textContent = valorAtual;
-        });
-    });
+// Adiciona o evento de clique
+btnTema.addEventListener('click', () => {
+    // Alterna a classe '.tema-escuro' no body da página
+    document.body.classList.toggle('tema-escuro');
+    
+    // Verifica se o modo escuro está ativo para atualizar o texto do botão
+    if (document.body.classList.contains('tema-escuro')) {
+        btnTema.innerHTML = "☀️ <span class='txt-btn'>Modo Claro</span>";
+    } else {
+        btnTema.innerHTML = "🌙 <span class='txt-btn'>Modo Escuro</span>";
+    }
 });
