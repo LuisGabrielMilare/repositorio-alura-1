@@ -3,47 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering the Box Model - Interactive Lab</title>
+    <title>Meu Blog de Tecnologia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container-principal">
-        <aside class="painel-controle">
-            <h2>Configurações</h2>
-            <p class="subtitulo">Ajuste os valores para inspecionar o Box Model</p>
-            
-            <div class="grupo-controle">
-                <label for="slider-max-width">Largura Máxima (max-width): <span id="val-max-width">800px</span></label>
-                <input type="range" id="slider-max-width" min="300" max="1000" value="800">
+    <header class="blog-header">
+        <h1>Tech & Educação Blog</h1>
+        <p>Compartilhando conhecimento linha a linha</p>
+    </header>
+
+    <main class="feed-principal">
+        
+        <article class="post-artigo">
+            <img class="post-imagem" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&q=80"
+                alt="Logotipo conceitual de tecnologia e educacao: um livro aberto de onde emerge um cérebro digital brilhante.">
+
+            <div class="post-conteudo">
+                <h2>Meu primeiro post</h2>
+                <p class="artigo-autor">Por: <strong>Marcelo Paludetto</strong></p>
+                <p class="artigo-texto">Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
+                
+                <div class="post-acoes">
+                    <button class="btn-reacao btn-like">👍 <span>0</span></button>
+                    <button class="btn-reacao btn-love">❤️ <span>0</span></button>
+                </div>
             </div>
+        </article>
 
-            <div class="grupo-controle">
-                <label for="slider-padding">Espaçamento Interno (padding): <span id="val-padding">16px</span></label>
-                <input type="range" id="slider-padding" min="0" max="60" value="16">
+        <article class="post-artigo">
+            <img class="post-imagem" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&q=80"
+                alt="Logotipo conceitual de tecnologia e educacao: um livro aberto de onde emerge um cérebro digital brilhante.">
+
+            <div class="post-conteudo">
+                <h2>Meu segundo post</h2>
+                <p class="artigo-autor">Por: <strong>Marcelo Paludetto</strong></p>
+                <p class="artigo-texto">Criar componentes reutilizáveis e entender a semântica do HTML nos ajuda a construir aplicações muito mais organizadas e fáceis de dar manutenção.</p>
+                
+                <div class="post-acoes">
+                    <button class="btn-reacao btn-like">👍 <span>0</span></button>
+                    <button class="btn-reacao btn-love">❤️ <span>0</span></button>
+                </div>
             </div>
+        </article>
 
-            <div class="grupo-controle">
-                <label for="slider-margin">Margem Lateral (margin: 0 auto): <span id="val-margin">Auto</span></label>
-                <p class="info-ajuste">A margem auto centraliza o elemento horizontalmente.</p>
-            </div>
-
-            <button id="btn-borda-inspecao" class="btn-primario">Ativar Borda de Inspeção (5px)</button>
-        </aside>
-
-        <main class="area-visualizacao">
-            <header id="preview-header">
-                <h1>Visualizador de Layout</h1>
-                <p>Altere os sliders ao lado para ver o comportamento deste bloco.</p>
-            </header>
-
-            <article id="preview-card" class="card-conteudo">
-                <h3>O Efeito do Espaçamento</h3>
-                <p>Quando adicionamos <strong>padding</strong>, criamos um respiro interno para o texto. A <strong>margin: auto</strong> calcula o espaço restante na tela e divide igualmente nas laterais, mantendo este card perfeitamente centralizado.</p>
-                <div class="badge-status">Modo Dinâmico Ativo</div>
-            </article>
-        </main>
-    </div>
+    </main>
 
     <script src="app.js"></script>
 </body>
