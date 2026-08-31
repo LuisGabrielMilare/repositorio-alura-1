@@ -3,546 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProtoFeedback - Análise de Protótipos</title>
-
-    <link rel="stylesheet" href="Style.css">
+    <title>Aventura - Cidade Perdida</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header class="header">
-        <div class="logo">
-            <span class="logo-icon">✦</span>
-            <span>ProtoFeedback</span>
-        </div>
-
-        <nav class="nav">
-            <a href="#inicio">Início</a>
-            <a href="#perguntas">Perguntas</a>
-            <a href="#feedback">Feedback</a>
-            <a href="#entrega">Entrega</a>
-        </nav>
-
-        <button class="btn-profile">
-            Meu projeto
-        </button>
-    </header>
-
-
     <main>
 
-        <!-- HERO -->
-        <section class="hero" id="inicio">
-
-            <div class="hero-content">
-
-                <span class="tag">ANÁLISE DE PROTÓTIPO</span>
-
-                <h1>
-                    Transforme opiniões em
-                    <span>melhores ideias.</span>
-                </h1>
-
-                <p>
-                    Apresente seu protótipo, receba feedback dos colegas
-                    e descubra quais melhorias podem tornar sua solução
-                    ainda mais eficiente.
-                </p>
-
-                <div class="hero-buttons">
-                    <button class="btn-primary" onclick="irParaPerguntas()">
-                        Começar análise
-                    </button>
-
-                    <button class="btn-secondary" onclick="mostrarSobre()">
-                        Como funciona?
-                    </button>
-                </div>
-
-            </div>
-
-
-            <div class="hero-card">
-
-                <div class="mini-window">
-
-                    <div class="window-header">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-
-                    <div class="prototype-preview">
-
-                        <div class="preview-title">
-                            Meu aplicativo
-                        </div>
-
-                        <div class="preview-box">
-                            <div class="preview-icon">📚</div>
-
-                            <div>
-                                <strong>Hub de conhecimento</strong>
-                                <small>Organize seus estudos</small>
-                            </div>
-                        </div>
-
-                        <div class="preview-lines"></div>
-                        <div class="preview-lines short"></div>
-
-                        <button class="preview-button">
-                            Explorar projeto
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- PROGRESSO -->
-        <section class="progress-section">
-
-            <div class="section-container">
-
-                <div class="progress-header">
-                    <div>
-                        <span class="tag">SEU PROGRESSO</span>
-                        <h2>Análise do projeto</h2>
-                    </div>
-
-                    <strong id="progressText">0% concluído</strong>
-                </div>
-
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progressFill"></div>
-                </div>
-
-                <div class="steps">
-
-                    <div class="step active" id="step1">
-                        <div class="step-number">1</div>
-                        <span>Apresentar</span>
-                    </div>
-
-                    <div class="step" id="step2">
-                        <div class="step-number">2</div>
-                        <span>Perguntas</span>
-                    </div>
-
-                    <div class="step" id="step3">
-                        <div class="step-number">3</div>
-                        <span>Feedback</span>
-                    </div>
-
-                    <div class="step" id="step4">
-                        <div class="step-number">4</div>
-                        <span>Decisões</span>
-                    </div>
-
-                    <div class="step" id="step5">
-                        <div class="step-number">5</div>
-                        <span>Entrega</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- PERGUNTAS -->
-        <section class="content-section" id="perguntas">
-
-            <div class="section-container">
-
-                <div class="section-title">
-
-                    <div>
-                        <span class="tag">ETAPA 01</span>
-
-                        <h2>Perguntas norteadoras</h2>
-
-                        <p>
-                            Responda às perguntas pensando na primeira tela
-                            do seu protótipo. As respostas ajudam a verificar
-                            se a ideia está clara para outras pessoas.
-                        </p>
-                    </div>
-
-                    <div class="counter">
-                        <strong id="questionCounter">0</strong>/5
-                    </div>
-
-                </div>
-
-
-                <div class="questions">
-
-                    <div class="question-card">
-                        <span class="question-number">01</span>
-
-                        <h3>
-                            Ao observar a tela inicial, o que você acha
-                            que esse aplicativo faz?
-                        </h3>
-
-                        <textarea
-                            class="answer"
-                            placeholder="Digite sua resposta..."
-                            oninput="atualizarPerguntas()"></textarea>
-                    </div>
-
-
-                    <div class="question-card">
-                        <span class="question-number">02</span>
-
-                        <h3>
-                            O que você imagina que aconteceria ao clicar
-                            no principal botão da tela?
-                        </h3>
-
-                        <textarea
-                            class="answer"
-                            placeholder="Digite sua resposta..."
-                            oninput="atualizarPerguntas()"></textarea>
-                    </div>
-
-
-                    <div class="question-card">
-                        <span class="question-number">03</span>
-
-                        <h3>
-                            Você consegue encontrar facilmente a informação
-                            que procura?
-                        </h3>
-
-                        <textarea
-                            class="answer"
-                            placeholder="Digite sua resposta..."
-                            oninput="atualizarPerguntas()"></textarea>
-                    </div>
-
-
-                    <div class="question-card">
-                        <span class="question-number">04</span>
-
-                        <h3>
-                            Qual parte do protótipo parece mais útil
-                            para você?
-                        </h3>
-
-                        <textarea
-                            class="answer"
-                            placeholder="Digite sua resposta..."
-                            oninput="atualizarPerguntas()"></textarea>
-                    </div>
-
-
-                    <div class="question-card">
-                        <span class="question-number">05</span>
-
-                        <h3>
-                            O fluxo do aplicativo parece intuitivo?
-                            Por quê?
-                        </h3>
-
-                        <textarea
-                            class="answer"
-                            placeholder="Digite sua resposta..."
-                            oninput="atualizarPerguntas()"></textarea>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- FEEDBACK -->
-        <section class="feedback-section" id="feedback">
-
-            <div class="section-container">
-
-                <div class="section-title">
-
-                    <div>
-                        <span class="tag">ETAPA 02</span>
-
-                        <h2>Feedback dos colegas</h2>
-
-                        <p>
-                            Registre os principais comentários recebidos
-                            durante o teste do protótipo.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <div class="feedback-grid">
-
-                    <div class="feedback-form">
-
-                        <label for="feedbackText">
-                            O que seus colegas disseram?
-                        </label>
-
-                        <textarea
-                            id="feedbackText"
-                            placeholder="Ex: A tela inicial ficou clara, mas seria interessante destacar melhor o botão de adicionar arquivos."
-                        ></textarea>
-
-                        <button
-                            class="btn-primary"
-                            onclick="adicionarFeedback()">
-                            Adicionar feedback
-                        </button>
-
-                    </div>
-
-
-                    <div class="feedback-list" id="feedbackList">
-
-                        <div class="empty-feedback">
-                            <div>💬</div>
-
-                            <h3>
-                                Nenhum feedback ainda
-                            </h3>
-
-                            <p>
-                                Os feedbacks adicionados aparecerão aqui.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- DECISÕES -->
-        <section class="content-section" id="decisoes">
-
-            <div class="section-container">
-
-                <div class="section-title">
-
-                    <div>
-                        <span class="tag">ETAPA 03</span>
-
-                        <h2>O que vamos mudar?</h2>
-
-                        <p>
-                            Nem todo feedback precisa ser aplicado.
-                            Analise cada sugestão e decida se ela faz
-                            sentido para o seu projeto.
-                        </p>
-                    </div>
-
-                </div>
-
-
-                <div class="decision-box">
-
-                    <div class="decision-item">
-
-                        <div class="decision-icon green">
-                            ✓
-                        </div>
-
-                        <div>
-                            <strong>
-                                Feedbacks aprovados
-                            </strong>
-
-                            <p>
-                                Sugestões que serão incorporadas ao protótipo.
-                            </p>
-                        </div>
-
-                        <span class="decision-count" id="approvedCount">
-                            0
-                        </span>
-
-                    </div>
-
-
-                    <div class="decision-item">
-
-                        <div class="decision-icon red">
-                            ×
-                        </div>
-
-                        <div>
-                            <strong>
-                                Feedbacks não aplicados
-                            </strong>
-
-                            <p>
-                                Sugestões que não fazem sentido para o projeto.
-                            </p>
-                        </div>
-
-                        <span class="decision-count" id="rejectedCount">
-                            0
-                        </span>
-
-                    </div>
-
-                </div>
-
-                <div class="decision-message" id="decisionMessage">
-                    Adicione feedbacks acima para começar a tomar decisões.
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ENTREGA -->
-        <section class="delivery-section" id="entrega">
-
-            <div class="section-container">
-
-                <div class="delivery-card">
-
-                    <div class="delivery-icon">
-                        🚀
-                    </div>
-
-                    <div class="delivery-content">
-
-                        <span class="tag">ETAPA FINAL</span>
-
-                        <h2>
-                            Preparado para a entrega parcial?
-                        </h2>
-
-                        <p>
-                            Depois de aplicar os feedbacks no Figma,
-                            copie o link do seu projeto e finalize
-                            a primeira entrega parcial.
-                        </p>
-
-                        <div class="link-input">
-
-                            <input
-                                type="url"
-                                id="figmaLink"
-                                placeholder="Cole aqui o link do seu projeto no Figma">
-
-                            <button
-                                onclick="salvarLink()">
-                                Salvar
-                            </button>
-
-                        </div>
-
-                        <div
-                            class="saved-message"
-                            id="savedMessage">
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
+        <div class="passo ativo" id="passo-0">
+            <p>
+                Um dia desses, dentro de um livro da biblioteca da escola,
+                eu descobri uma carta antiga sobre uma cidade perdida,
+                escondida por riquezas e belezas naturais.
+                Nessa carta, a autora deixa algumas pistas para encontrar
+                essa cidade e eu decidi segui-las!
+            </p>
+
+            <button class="btn-proximo" data-proximo="1">
+                Rio de Janeiro
+            </button>
+
+            <button class="btn-proximo" data-proximo="2">
+                Pernambuco
+            </button>
+        </div>
+
+        <div class="passo" id="passo-1">
+            <p>
+                Você começa sua jornada no Rio de Janeiro, subindo o
+                Pico da Tijuca ao amanhecer para encontrar a primeira pista.
+            </p>
+
+            <button class="btn-proximo" data-proximo="3">
+                Procurar a pista no topo do pico
+            </button>
+
+            <button class="btn-proximo" data-proximo="4">
+                Desistir e voltar para casa
+            </button>
+        </div>
+
+        <div class="passo" id="passo-2">
+            <p>
+                Você decide seguir para Pernambuco em busca de novas pistas
+                sobre a cidade perdida.
+            </p>
+
+            <button class="btn-proximo" data-proximo="5">
+                Explorar a região
+            </button>
+
+            <button class="btn-proximo" data-proximo="6">
+                Voltar para casa
+            </button>
+        </div>
+
+        <div class="passo" id="passo-3">
+            <p>
+                No topo do Pico da Tijuca, você encontra uma antiga pista
+                escondida entre as pedras. Parece que está cada vez mais
+                perto de descobrir a cidade perdida!
+            </p>
+
+            <button class="btn-proximo" data-proximo="7">
+                Seguir a pista
+            </button>
+        </div>
+
+        <div class="passo" id="passo-4">
+            <p>
+                Você decide desistir da aventura e voltar para casa.
+                Talvez outra oportunidade apareça no futuro.
+            </p>
+        </div>
+
+        <div class="passo" id="passo-5">
+            <p>
+                Explorando Pernambuco, você encontra uma nova pista que
+                pode levar até a cidade perdida.
+            </p>
+
+            <button class="btn-proximo" data-proximo="7">
+                Seguir a pista
+            </button>
+        </div>
+
+        <div class="passo" id="passo-6">
+            <p>
+                Você decide voltar para casa. A aventura termina por aqui.
+            </p>
+        </div>
+
+        <div class="passo" id="passo-7">
+            <p>
+                Depois de seguir as pistas, você finalmente encontra a
+                cidade perdida, cercada por riquezas e belezas naturais.
+                Sua aventura foi um sucesso!
+            </p>
+        </div>
 
     </main>
-
-
-    <footer>
-
-        <div class="footer-content">
-
-            <div class="logo">
-                <span class="logo-icon">✦</span>
-                ProtoFeedback
-            </div>
-
-            <p>
-                Transformando feedback em soluções melhores.
-            </p>
-
-            <span>
-                Projeto acadêmico • 2026
-            </span>
-
-        </div>
-
-    </footer>
-
-
-    <div class="modal" id="aboutModal">
-
-        <div class="modal-content">
-
-            <button
-                class="modal-close"
-                onclick="fecharSobre()">
-                ×
-            </button>
-
-            <span class="tag">COMO FUNCIONA</span>
-
-            <h2>
-                Deixe seu protótipo ser avaliado.
-            </h2>
-
-            <p>
-                A ideia é apresentar o protótipo para outra pessoa
-                e descobrir se ela entende a solução sem que você
-                precise explicar cada detalhe.
-            </p>
-
-            <div class="modal-steps">
-
-                <div>
-                    <strong>01</strong>
-                    <span>Apresente</span>
-                </div>
-
-                <div>
-                    <strong>02</strong>
-                    <span>Faça perguntas</span>
-                </div>
-
-                <div>
-                    <strong>03</strong>
-                    <span>Receba feedback</span>
-                </div>
-
-                <div>
-                    <strong>04</strong>
-                    <span>Melhore</span>
-                </div>
-
-            </div>
-
-            <button
-                class="btn-primary full"
-                onclick="fecharSobre(); irParaPerguntas()">
-                Começar agora
-            </button>
-
-        </div>
-
-    </div>
-
 
     <script src="app.js"></script>
 
